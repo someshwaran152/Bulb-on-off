@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bulb ON/OFF Project</title>
+  <style>
+    #container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    #bulb {
+      width: 200px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+    #button_container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>BULB ON OFF project in JS</h1>
+    <img 
+      src="https://cdn.pixabay.com/photo/2014/06/25/06/33/light-bulb-376926_1280.jpg" 
+      alt="Bulb OFF" 
+      id="bulb"
+    />
+    <div id="button_container">
+      <button id="on">ON</button>
+      <button id="off">OFF</button>
+    </div>
+  </div>
+
+  <script>
+    const on_btn = document.getElementById("on");
+    const off_btn = document.getElementById("off");
+    const img = document.getElementById("bulb");
+
+    function bulb_on() {
+      img.src = "https://cdn.pixabay.com/photo/2014/04/03/10/32/bulb-310821_1280.png"; // Bulb ON image
+      img.alt = "Bulb ON";
+    }
+
+    function bulb_off() {
+      img.src = "https://cdn.pixabay.com/photo/2014/06/25/06/33/light-bulb-376926_1280.jpg"; // Bulb OFF image
+      img.alt = "Bulb OFF";
+    }
+
+    on_btn.addEventListener("click", bulb_on);
+    off_btn.addEventListener("click", bulb_off);
+  </script>
+</body>
+</html>
